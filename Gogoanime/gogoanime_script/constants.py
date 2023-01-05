@@ -1,0 +1,3 @@
+
+MainLink = 'https://gogoanime.sk'
+
