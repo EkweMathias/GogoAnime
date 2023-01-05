@@ -7,7 +7,7 @@ from gogoanime_script.links import AnimeLinks
 
 
 class Anime(webdriver.Chrome):
-    def __init__(self, driver_path=r"C:\Users\Talent\Desktop\Selenium", teardown=False):
+    def __init__(self, driver_path=r"E:\\CHROME DRIVERS\\chromedriver_win32", teardown=False):
         self.driver_path = driver_path
         self.teardown = teardown
         os.environ['PATH'] += self.driver_path
@@ -100,13 +100,7 @@ class Anime(webdriver.Chrome):
         link = self.find_element(By.ID, 'load_ep')
         link.find_element(By.TAG_NAME, 'a').click()
 
-    def login(self):
-        self.find_element(By.CSS_SELECTOR, 'a[title="login"]').click()
-        email = self.find_element(By.CSS_SELECTOR, 'input[type="email"]')
-        email.send_keys('singoekwe@gmail.com')
-        password = self.find_element(By.CSS_SELECTOR, 'input[type="password"]')
-        password.send_keys('fotken-huthi4-konreJ')
-        self.find_element(By.CSS_SELECTOR, 'button[type="submit"]').click()
+
 
         print('Login successfully...')
 
@@ -116,4 +110,4 @@ class Anime(webdriver.Chrome):
         child = self.window_handles[1]
         self.switch_to.window(child)
         print('Switching to child')
-        self.get('https://www.anaconda.com/products/distribution/download-success-2')
+        self.get('https://www.google.com')
